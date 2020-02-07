@@ -1,2 +1,0 @@
-# springCloudConfig
-配置
