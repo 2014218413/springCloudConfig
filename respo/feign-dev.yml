@@ -1,0 +1,32 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka/
+spring:
+  application:
+    name: product-view-service-feign
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    servlet:
+      content-type: text/html
+  sleuth:
+    feign:
+      enabled: true
+#这里就是引用gitHub上的配置文件       只有这些就够了  用的是eureka-dev.yml
+#spring:
+#  cloud:
+#    config:
+#      name: eureka
+#      uri: http://localhost:8888
+#      label: master
+#      profile: dev
+server:
+  port: 7003
+feign.hystrix.enabled: true
+#hystrix:
+#  metrics:
+#    enabled: true
